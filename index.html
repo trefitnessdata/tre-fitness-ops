@@ -4315,7 +4315,7 @@ function editStockItem(id) {
 
 function deleteStockItem(id) {
   const item = stockList.find(i => i.id === id);
-  if (!confirm("Delete "" + (item?.name||"this item") + ""?")) return;
+  if (!confirm("Delete \"" + (item?.name||"this item") + "\"?")) return;
   stockList = stockList.filter(i => i.id !== id);
   saveStock(); renderStock(); toast2("✓ Item deleted.");
 }
